@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity } from 'react-native';
 
 
@@ -8,7 +8,7 @@ export default function HeaderTabs() {
 
   return (
     <View style={{ flexDirection:'row', alignSelf:'center'}}>
-
+          {/* HeaderButton */}
           < HeaderButton
              text="Delivery"
              btnColor="black" 
@@ -23,9 +23,9 @@ export default function HeaderTabs() {
             activeTab={activeTab} 
             setActiveTab={setActiveTab}
           />
-       
-
           {/* HeaderButton */}
+
+  
 
     </View>
   );
