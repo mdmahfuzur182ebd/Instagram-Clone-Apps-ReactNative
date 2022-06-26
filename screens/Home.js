@@ -4,7 +4,10 @@
   import HeaderTabs from '../components/HeaderTabs';
   import SearchBar from '../components/SearchBar';
   import Categories from '../components/Categories';
+  import { Divider } from "react-native-elements";
+  import BottomTabs from "../components/BottomTabs";
   import RestaurantItems, { localRestaurants } from '../components/RestaurantItems';
+
 
   const YELP_API_KEY = "KgxlkrTw2rlbtBUFEX9Z7lvBZF1GH4vHnbuH0fC7TzBHANWTtWkk4uSoR5R93nIsf1IkekyLTCISg3VaY-X-ZTuneLQ-_jzvJ24hWib265Dc7FH--fAnPi64az64YnYx ";
 
@@ -48,8 +51,12 @@
     
      <ScrollView showsVerticalScrollIndicator={false}>
         <Categories/>
-        <RestaurantItems restaurantData={restaurantData} cityHandler={setCity}/>
+        {/* <RestaurantItems restaurantData={restaurantData}cityHandler={setCity}/> */}
+        <RestaurantItems restaurantData={restaurantData}/>
      </ScrollView>
+     
+     <Divider width={1}/>
+     <BottomTabs />
 
     </SafeAreaView>
   );
