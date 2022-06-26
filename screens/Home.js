@@ -12,36 +12,37 @@
 
   const [restaurantData, setRestaurantData] = React.useState(localRestaurants);
   const [city, setCity ] = useState("New York");
+  const [activeTab, setActiveTab] = useState("Delivery");
 
-  const getRestaurantFromYelp = () => {
-    
-      const yelpUrl = `https://api.yelp.com/v3/businesses/search?term=restaurants&location=${city}`;
+  const getRestaurantsFromYelp = () => {
+    const yelpUrl = `https://api.yelp.com/v3/businesses/search?term=restaurants&location=${city}`;
 
-    
-
-    const apiOptions ={
-      headers:{
-          Authorization: `Bearer ${YELP_API_KEY}`,
+    const apiOptions = {
+      headers: {
+        Authorization: `Bearer ${YELP_API_KEY}`,
       },
-      };
-        
-      return fetch(yelpUrl,apiOptions)
-      .then( (res) => res.json()).
-       then((json) => 
-        setRestaurantData(json.businesses));
-
     };
 
-    useEffect(() => {
-      getRestaurantFromYelp();
-    }, [city,]);
+    return fetch(yelpUrl, apiOptions)
+      .then((res) => res.json())
+      .then((json) =>
+        setRestaurantData(
+          json.businesses.filter((business) =>
+            business.transactions.includes(activeTab.toLowerCase())
+          )
+        )
+      );
+  };
 
+  useEffect(() => {
+    getRestaurantsFromYelp();
+  }, [city, activeTab]);
 
 
   return (
     <SafeAreaView style={{backgroundColor:"#eee", flex: 1 }}>
      <View style={{backgroundColor:'white', padding:15, paddingTop:Platform.OS === 'ios' ? 0: Constants.statusBarHeight,}}>
-          <HeaderTabs/>
+          <HeaderTabs activeTab={activeTab} setActiveTab={setActiveTab} />
           <SearchBar cityHandler={setCity} />
      </View>
     
