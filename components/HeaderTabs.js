@@ -7,7 +7,7 @@ export default function HeaderTabs() {
     const [activeTab, setActiveTab] = useState("Delivery");
 
   return (
-    <View style={{ flexDirection:'row', alignSelf:'center'}}>
+    <View style={{ flexDirection:'row', alignSelf:'center', marginTop:15,}}>
           {/* HeaderButton */}
           < HeaderButton
              text="Delivery"
