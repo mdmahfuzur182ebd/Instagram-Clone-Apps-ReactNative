@@ -16,7 +16,7 @@ const yelpRestaurantInfo = {
       ],
 };
 
-const {name, image, price, reviews, rating, categories} =yelpRestaurantInfo;
+const {name, image, price, reviews, rating, categories} = yelpRestaurantInfo;
 
 const formattedCategories = categories.map((cat) => cat.title).join(" • ");
 
@@ -47,7 +47,7 @@ const RestaurantName = (props) => (
          marginHorizontal:15,    
     }}
    >
-    {props.title}
+    {props.name}
   </Text>
 
 );
