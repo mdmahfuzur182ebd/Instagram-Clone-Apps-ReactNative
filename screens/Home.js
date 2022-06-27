@@ -53,12 +53,13 @@
      <ScrollView showsVerticalScrollIndicator={false}>
         <Categories/>
         {/* <RestaurantItems restaurantData={restaurantData}cityHandler={setCity}/> */}
-        <RestaurantItems restaurantData={restaurantData} navigation={navigation} />
+        <RestaurantItems 
+          restaurantData={restaurantData}
+          navigation={navigation} 
+        />
      </ScrollView>
-     
      <Divider width={1}/>
      <BottomTabs />
-
     </SafeAreaView>
   );
 }
