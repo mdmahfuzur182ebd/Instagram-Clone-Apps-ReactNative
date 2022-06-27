@@ -11,10 +11,9 @@
 
   const YELP_API_KEY = "KgxlkrTw2rlbtBUFEX9Z7lvBZF1GH4vHnbuH0fC7TzBHANWTtWkk4uSoR5R93nIsf1IkekyLTCISg3VaY-X-ZTuneLQ-_jzvJ24hWib265Dc7FH--fAnPi64az64YnYx ";
 
-  export default function Home({navigation
-  }) {
+  export default function Home({ navigation }) {
 
-  const [restaurantData, setRestaurantData] = React.useState(localRestaurants);
+  const [restaurantData, setRestaurantData] =useState(localRestaurants);
   const [city, setCity ] = useState("New York");
   const [activeTab, setActiveTab] = useState("Delivery");
 
@@ -31,7 +30,7 @@
       .then((res) => res.json())
       .then((json) =>
         setRestaurantData(
-          json.businesses.filter((business) =>
+            json.businesses.filter((business) =>
             business.transactions.includes(activeTab.toLowerCase())
           )
         )
