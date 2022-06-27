@@ -6,19 +6,22 @@ import Home from './screens/Home';
 import RestaurantDetail from "./screens/RestaurantDetail";
 
 
-export default function Navigation() {
+export default function RootNavigation() {
      const Stack = createStackNavigator();
 
-     const screenOption ={
+     const screenOptions ={
         headerShown: false,
      };
 
   return (
      <NavigationContainer>
 
-        <Stack.Navigator screenOption={screenOption}>
-             <Stack.Screen name="Home" component={Home} />
-             <Stack.Screen name="RestaurantDetail" component={RestaurantDetail} />
+        <Stack.Navigator 
+            initialRouteName='RestaurantDetail' 
+            screenOption={screenOptions}
+        >
+         <Stack.Screen name="Home" component={Home} />
+         <Stack.Screen name="RestaurantDetail" component={RestaurantDetail} />
 
         </Stack.Navigator>
 

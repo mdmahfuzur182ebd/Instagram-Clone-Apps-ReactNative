@@ -34,7 +34,7 @@ export const localRestaurants = [
   },
 ];
 
-export default function RestaurantItems(props) {
+export default function RestaurantItems({ navigation, ...props}) {
   return (
 
     <TouchableOpacity activeOpacity={1} style={{ marginBottom:30 }} >

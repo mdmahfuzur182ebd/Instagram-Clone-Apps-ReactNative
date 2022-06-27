@@ -16,7 +16,7 @@ const foods =[
         description:"Amazing Bangladesh dish with tenderloin chicken off the sizzels ",
         price:"$19.20",
         image :
-        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudCUyMGludGVyaW9yfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+         "https://static.onecms.io/wp-content/uploads/sites/9/2020/04/24/ppp-why-wont-anyone-rescue-restaurants-FT-BLOG0420.jpg",
 
        },
 
@@ -27,6 +27,14 @@ const foods =[
         image :
         "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudCUyMGludGVyaW9yfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
        },
+       {
+        title: "Chilaquiles",
+        description:"Chilaquiles with cheese and sauce. A delicious mesican dish",
+        price:"$14.50",
+        image :
+        "https://static.onecms.io/wp-content/uploads/sites/9/2020/04/24/ppp-why-wont-anyone-rescue-restaurants-FT-BLOG0420.jpg",
+       },
+
 ];
 
 const styles = StyleSheet.create({
@@ -52,7 +60,7 @@ export default function MenuTtems() {
             <FoodInfo food={food} />
             <FoodImage food={food} />
           </View>
-            <Divider width={0.5} orientation="vertical" />
+            <Divider width={0.5} orientation="vertical" style={{marginHorizontal: 20 }} />
         </View>      
       ))}
     </ScrollView>

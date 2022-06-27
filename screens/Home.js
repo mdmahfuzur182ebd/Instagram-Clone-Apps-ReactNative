@@ -11,7 +11,8 @@
 
   const YELP_API_KEY = "KgxlkrTw2rlbtBUFEX9Z7lvBZF1GH4vHnbuH0fC7TzBHANWTtWkk4uSoR5R93nIsf1IkekyLTCISg3VaY-X-ZTuneLQ-_jzvJ24hWib265Dc7FH--fAnPi64az64YnYx ";
 
-  export default function Home() {
+  export default function Home({navigation
+  }) {
 
   const [restaurantData, setRestaurantData] = React.useState(localRestaurants);
   const [city, setCity ] = useState("New York");
@@ -52,7 +53,7 @@
      <ScrollView showsVerticalScrollIndicator={false}>
         <Categories/>
         {/* <RestaurantItems restaurantData={restaurantData}cityHandler={setCity}/> */}
-        <RestaurantItems restaurantData={restaurantData}/>
+        <RestaurantItems restaurantData={restaurantData} navigation={navigation} />
      </ScrollView>
      
      <Divider width={1}/>
