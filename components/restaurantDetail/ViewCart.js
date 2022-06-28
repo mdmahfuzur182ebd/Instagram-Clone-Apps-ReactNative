@@ -24,15 +24,15 @@ return (
    <>
     {total ? (
     <View 
-     style={{
-          flex:1,
-          alignItems: 'center',
-          justifyContent: "center",
-          flexDirection: "row",
-          position: 'absolute',
-          bottom: 130,
-          zIndex: 999,
-      }}
+    style={{
+            flex: 1,
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "row",
+            position: "absolute",
+            bottom: 130,
+            zIndex: 999,
+       }}
     >
       <View  
         style={{
@@ -55,9 +55,11 @@ return (
 
           }}
          >
-          <Text style={{ color: 'white', fontSize:20, marginRight: 30 }}>View Cart
-          </Text>
-         <Text style={{ color:"white", fontSize:20 }}>{totalUSD}</Text> 
+         <Text style={{ color: "white", fontSize: 20, marginRight: 30 }}>
+              View Cart
+         </Text>
+              <Text style={{ color: "white", fontSize: 20 }}>  {totalUSD}
+              </Text>
         </TouchableOpacity>
        </View>
     </View> 
