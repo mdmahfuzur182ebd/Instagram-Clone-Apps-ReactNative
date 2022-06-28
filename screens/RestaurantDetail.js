@@ -7,6 +7,7 @@ import ViewCart from '../components/restaurantDetail/ViewCart';
 
 
 
+
 export default function RestaurantDetail({ route, navigation }) {
   return (
     <View>

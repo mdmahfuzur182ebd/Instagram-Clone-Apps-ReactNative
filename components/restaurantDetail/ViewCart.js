@@ -7,12 +7,12 @@ export default function ViewCart() {
     <View 
      style={{
           flex:1,
-          alignItems:'center',
-          justifyContent:"center",
-          flexDirection:"row",
-          position:'absolute',
-          bottom:130,
-          zIndex:999,
+          alignItems: 'center',
+          justifyContent: "center",
+          flexDirection: "row",
+          position: 'absolute',
+          bottom: 130,
+          zIndex: 999,
       }}
     >
       <View  
@@ -21,8 +21,10 @@ export default function ViewCart() {
             justifyContent:'center',
             width: "100%",
 
-        }}>
-        <TouchableOpacity style={{
+        }}
+        >
+        <TouchableOpacity 
+        style={{
              marginTop:20,
              backgroundColor:'black',
              alignItems: 'center',
@@ -33,7 +35,7 @@ export default function ViewCart() {
 
           }}
          >
-          <Text style={{ color: 'white', fontSize:20 }}>VIEWCART</Text>
+          <Text style={{ color: 'white', fontSize:20 }}>View Cart</Text>
         </TouchableOpacity>
        </View>
     </View>
