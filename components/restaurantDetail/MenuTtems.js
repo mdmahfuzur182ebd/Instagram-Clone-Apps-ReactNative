@@ -41,14 +41,13 @@ const foods =[
 const styles = StyleSheet.create({
     menuItemStyle: {
         flexDirection:'row',
-        justifyContent:'space-between',
-        margin:20,   
+        justifyContent: "space-between",
+        margin: 20,   
     },
     titleStyle: {
-       fontSize:19,
-       fontWeight:'600',
-
-   },
+      fontSize: 19,
+      fontWeight: "600",
+  },
 
 });
 
@@ -84,8 +83,13 @@ const FoodInfo = (props) => (
 
 const FoodImage = (props) => (
       <View>
-        <Image source={{uri : props.food.image
-        }}  style={{ width:180, height: 100, borderRadius:8  }}
+        <Image 
+        source={{uri : props.food.image}}
+        style={{
+           width:180, 
+           height: 100, 
+           borderRadius:8 ,
+          }}
        />
       </View>
 
