@@ -7,7 +7,10 @@ export default function ViewCart() {
 
   const items = useSelector((state) => state.cartReducer.selectedItems.items);
 
-  const total = items.map((item => Number(item.price.replace('$', '')))).reduce((prev, curr) => prev + curr, 0);
+  const total = items
+    .map((item) => Number(item.price.replace("$", "")))
+    .reduce((prev, curr) => prev + curr, 0);
+  
 
   const totalUSD = total.toLocaleString("en", {
          style: "currency",

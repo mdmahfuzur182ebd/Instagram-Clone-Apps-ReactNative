@@ -57,7 +57,7 @@ export default function RestaurantItems({ navigation, ...props}) {
           style={{ marginTop:10,  padding:15,backgroundColor:"white" }}
          > 
             <RestaurantImage image={restaurant.image_url} />
-            <RestaurantInfo name={restaurant.name} rating={restaurant.rating} />
+            <RestaurantInfo name={restaurant.name} rating={restaurant.rating} reviews={restaurant.reviews_count}/>
         </View> 
         
       </TouchableOpacity>

@@ -73,21 +73,20 @@ export default function MenuTtems({restaurantName}) {
 
   const selectItem = (item, checkboxValue) =>
     dispatch({
-      type:"ADD_TO_CART",
-      payload : {
-        ...item, 
-        restaurantName: restaurantName, 
-        checkboxValue: checkboxValue ,
+      type: "ADD_TO_CART",
+      payload: {
+        ...item,
+        restaurantName: restaurantName,
+        checkboxValue: checkboxValue,
       },
     });
 
     const cartItems = useSelector (
-       (state) => state.cartReducer.selectItem.items
-
+       (state) =>  state.cartReducer.selectedItems.items
     );
 
-    const isFoodInCart = (food, carItems) =>
-     Boolean(carItems.find((item) => item.title == food.title));
+    const isFoodInCart = (food, cartItems) =>
+     Boolean(cartItems.find((item) => item.title === food.title));
 
 
 
@@ -99,8 +98,8 @@ export default function MenuTtems({restaurantName}) {
             <BouncyCheckbox 
               iconStyle={{ borderColor: "lightgray", borderRadius: 0}}
               fillColor='green'
-              isChecked ={isFoodInCart(food, cartItems)}
-              onPress={(checkboxValue) => selectItem(food, checkboxValue) }
+              isChecked={isFoodInCart(food, cartItems)}
+              onPress={(checkboxValue) => selectItem(food, checkboxValue)}
              
             />
             <FoodInfo food={food} />
