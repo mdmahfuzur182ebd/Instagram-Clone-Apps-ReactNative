@@ -6,7 +6,7 @@ import OrderItem from "./OrderItem";
 import firebase from '../../firebase';
 
 
-export default function ViewCart() {
+export default function ViewCart({navigation}) {
   
   const [ modalVisible, setModalVisible ] = useState(false);
 
@@ -20,7 +20,7 @@ export default function ViewCart() {
   const totalUSD = total.toLocaleString("en", {
          style: "currency",
          currency: "USD",
-
+  
   });
   
   const addOrderToFirebase = () => {
@@ -30,8 +30,9 @@ export default function ViewCart() {
         restaurantName: restaurantName,
         createdAt : firebase.firestore.fieldValue.serverTimestamp(),
        });
-       
+
       setModalVisible(false);
+      navigation.navigation('OrderCompletd')
 
   };
 
