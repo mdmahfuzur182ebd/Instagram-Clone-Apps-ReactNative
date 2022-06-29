@@ -19,7 +19,7 @@ export default function OrderCompletd() {
       },
     ],
   });
-  
+
   const[items, restaurantName ] = useSelector((state) => state.cartReducer.selectedItems.selectedItems);
 
   const total = items
@@ -51,7 +51,14 @@ export default function OrderCompletd() {
   
   return (
     <SafeAreaView style={{ flex:1, backgroundColor: "white"}}>
+
         {/* green chcekmark */}
+        <View style={{
+            margin: 15,
+            alignItems : 'center',
+            height: '100%',
+        }}
+        >
           <LottieView
             style={{ height: 200, alignSelf: "center" }}
             source={require("../assets/animations/cooking.json")}
@@ -59,7 +66,7 @@ export default function OrderCompletd() {
             speed={0.5}
             loop={false}
           />
-      <Text>
+      <Text style={{ fontSize: 20, fontWeight:"bold" }}>
           Your order at {restaurantName} has been Placed for {totalUSD}
       </Text>
       {/* menuItems */}
@@ -77,6 +84,7 @@ export default function OrderCompletd() {
             speed={0.5}
           />
        </ScrollView>
+       </View>
     </SafeAreaView>
   )
 }
