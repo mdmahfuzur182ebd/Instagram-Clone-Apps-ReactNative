@@ -9,6 +9,7 @@ import firebase from '../../firebase';
 export default function ViewCart({navigation}) {
   
   const [ modalVisible, setModalVisible ] = useState(false);
+  const [ loading, setLoading] = useState(false);
 
   const[items, restaurantName ] = useSelector((state) => state.cartReducer.selectedItems.selectedItems);
 
@@ -24,16 +25,22 @@ export default function ViewCart({navigation}) {
   });
   
   const addOrderToFirebase = () => {
+
     const db = firebase.firestore();
-    db.collection("orders").add({
+       setLoading(true);
+    db.collection("orders").
+      add({
         items: items ,
         restaurantName: restaurantName,
         createdAt : firebase.firestore.fieldValue.serverTimestamp(),
+       }).then(() => {
+          setTimeout(() =>{
+            setLoading(false);
+            navigation.navigate("OrderCompleted");  
+           // setModalVisible(false);  
+          }, 2500);
+
        });
-
-      setModalVisible(false);
-      navigation.navigation('OrderCompletd')
-
   };
 
    const styles = StyleSheet.create({
@@ -99,6 +106,8 @@ export default function ViewCart({navigation}) {
                  }}
                   onPress ={() => {
                     addOrderToFirebase();
+                    setModalVisible(false);
+                   
                   }}
                  >
 
@@ -179,6 +188,25 @@ export default function ViewCart({navigation}) {
     ) : (
       <></>  
     )}
+    {loading ? <View
+      style={{ 
+          backgroundColor: "black", 
+          padding:'absolute',
+          opacity: 0.6,
+          justifyContent: "center",
+          alignItems: "center",
+          height:"100%",
+          width:"100%" ,
+
+    }}
+    >
+    <LottieView
+            style={{ height: 200 }}
+            source={require("../../assets/animations/scanner.json")}
+            autoPlay
+            speed={3}
+          />
+    </View> : <></>}
    </>
   );
 }
