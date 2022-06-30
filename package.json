@@ -4,12 +4,12 @@
     "@react-navigation/stack": "^6.2.1",
     "expo": "^45.0.0",
     "expo-constants": "~13.1.1",
-    "firebase": "^9.8.4",
-    "lottie-react-native": "^5.1.3",
+    "firebase": "^9.6.11",
+    "lottie-react-native": "5.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-hook-use-state": "^1.1.0",
-    "react-native": "^0.69.1",
+    "react-native": "0.68.2",
     "react-native-bouncy-checkbox": "^2.1.10",
     "react-native-elements": "^3.4.2",
     "react-native-gesture-handler": "^2.2.1",
@@ -38,5 +38,18 @@
   },
   "version": "1.0.0",
   "private": true,
-  "name": "uber-eat-clone"
+  "name": "uber-eat-clone",
+  "description": "<p>   <!-- iOS -->   <a href=\"https://itunes.apple.com/app/apple-store/id982107779\">     <img alt=\"Supports Expo iOS\" longdesc=\"Supports Expo iOS\" src=\"https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff\" />   </a>   <!-- Android -->   <a href=\"https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample\">     <img alt=\"Supports Expo Android\" longdesc=\"Supports Expo Android\" src=\"https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff\" />   </a>   <!-- Web -->   <a href=\"https://docs.expo.dev/workflow/web/\">     <img alt=\"Supports Expo Web\" longdesc=\"Supports Expo Web\" src=\"https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff\" />   </a> </p>",
+  "main": "App.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdmahfuzur182ebd/Uber-Eats-Clone-Mahfuzur.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdmahfuzur182ebd/Uber-Eats-Clone-Mahfuzur/issues"
+  },
+  "homepage": "https://github.com/mdmahfuzur182ebd/Uber-Eats-Clone-Mahfuzur#readme"
 }
