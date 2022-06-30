@@ -11,7 +11,7 @@
   export default function Home() {
 
   const [restaurantData, setRestaurantData] = React.useState(localRestaurants);
-  const [city, setCity ] = useState("New York");
+  const [city, setCity ] = useState("South Carolina	");
 
   const getRestaurantFromYelp = () => {
     
