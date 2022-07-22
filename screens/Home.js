@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, SafeAreaView, ScrollView, Platform } from "react-native";
+import { View, Text, SafeAreaView, ScrollView } from "react-native";
 import { Divider } from "react-native-elements";
 import BottomTabs from "../components/home/BottomTabs";
 import Categories from "../components/home/Categories";
@@ -7,9 +7,10 @@ import HeaderTabs from "../components/home/HeaderTabs";
 import RestaurantItems, {
   localRestaurants,
 } from "../components/home/RestaurantItems";
-import SearchBar from "../components/home/SearchBar";q
+import SearchBar from "../components/home/SearchBar";
 
- const YELP_API_KEY = "KgxlkrTw2rlbtBUFEX9Z7lvBZF1GH4vHnbuH0fC7TzBHANWTtWkk4uSoR5R93nIsf1IkekyLTCISg3VaY-X-ZTuneLQ-_jzvJ24hWib265Dc7FH--fAnPi64az64YnYx ";
+const YELP_API_KEY =
+  "KgxlkrTw2rlbtBUFEX9Z7lvBZF1GH4vHnbuH0fC7TzBHANWTtWkk4uSoR5R93nIsf1IkekyLTCISg3VaY-X-ZTuneLQ-_jzvJ24hWib265Dc7FH--fAnPi64az64YnYx";
 
 export default function Home({ navigation }) {
   const [restaurantData, setRestaurantData] = useState(localRestaurants);
@@ -41,7 +42,7 @@ export default function Home({ navigation }) {
   }, [city, activeTab]);
 
   return (
-     <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 , paddingTop: Platform.OS === 'ios' ? 0: ConstantSourceNode.statusBarHeight, }}>
+    <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
       <View style={{ backgroundColor: "white", padding: 15 }}>
         <HeaderTabs activeTab={activeTab} setActiveTab={setActiveTab} />
         <SearchBar cityHandler={setCity} />

@@ -3,7 +3,7 @@ import { View, Text, SafeAreaView, ScrollView } from "react-native";
 import { useSelector } from "react-redux";
 import LottieView from "lottie-react-native";
 import firebase from "../firebase";
-import MenuItems from "../components/restaurantDetail/MenuTtems";
+import MenuItems from "../components/restaurantDetail/MenuItems";
 
 export default function OrderCompleted() {
   const [lastOrder, setLastOrder] = useState({

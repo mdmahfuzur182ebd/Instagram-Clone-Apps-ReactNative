@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text } from "react-native";
 import { Divider } from "react-native-elements";
 import About from "../components/restaurantDetail/About";
-import MenuItems from "../components/restaurantDetail/MenuTtems";
+import MenuItems from "../components/restaurantDetail/MenuItems";
 import ViewCart from "../components/restaurantDetail/ViewCart";
 
 const foods = [
