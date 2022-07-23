@@ -13,7 +13,7 @@ const YELP_API_KEY =
   "KgxlkrTw2rlbtBUFEX9Z7lvBZF1GH4vHnbuH0fC7TzBHANWTtWkk4uSoR5R93nIsf1IkekyLTCISg3VaY-X-ZTuneLQ-_jzvJ24hWib265Dc7FH--fAnPi64az64YnYx";
 
 export default function Home({ navigation }) {
-  const [restaurantData, setRestaurantData] = useState(localRestaurants);
+  const [restaurantData, setRestaurantData] = useState(localRestaurants); 
   const [city, setCity] = useState("San Francisco");
   const [activeTab, setActiveTab] = useState("Delivery");
 
@@ -42,7 +42,7 @@ export default function Home({ navigation }) {
   }, [city, activeTab]);
 
   return (
-    <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
+    <SafeAreaView style={{ backgroundColor: "#eee", flex: 1 , paddingTop: Platform.OS === 'ios' ? 0: ConstantSourceNode.statusBarHeight, }}>
       <View style={{ backgroundColor: "white", padding: 15 }}>
         <HeaderTabs activeTab={activeTab} setActiveTab={setActiveTab} />
         <SearchBar cityHandler={setCity} />
